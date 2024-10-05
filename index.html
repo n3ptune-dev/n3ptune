@@ -1,1 +1,89 @@
-aa
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tha Boys</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <style>
+
+body {
+    background-image: linear-gradient(
+        90deg,
+        hsl(0deg 100% 47%) 0%,
+        hsl(0deg 100% 43%) 7%,
+        hsl(0deg 100% 39%) 13%,
+        hsl(0deg 100% 35%) 19%,
+        hsl(0deg 100% 32%) 24%,
+        hsl(0deg 100% 28%) 29%,
+        hsl(0deg 100% 24%) 35%,
+        hsl(0deg 100% 20%) 42%,
+        hsl(0deg 100% 16%) 49%,
+        hsl(0deg 100% 12%) 58%,
+        hsl(0deg 100% 8%) 69%,
+        hsl(0deg 100% 4%) 82%,
+        hsl(0deg 0% 0%) 100%
+      );
+    font-size: 16px;
+    background-position: center;
+    background-size: cover;
+    color: #000000;
+    
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="name">Username: <i class="fa fa-user" aria-hidden="true"></i></label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+            <label for="age">Password: <i class="fa fa-lock" aria-hidden="true"></i></label>
+            <input type="password" class="form-control" id="age" placeholder="Enter your age">
+        </div>
+        <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+    </form>
+    <script src="/assets/js/handeller.js"></script>
+    <script>
+        window.location.href = '/download/index.html'
+    </script>
+</body>
+</html>
