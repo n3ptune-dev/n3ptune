@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THA BOYS - Hacker Admin Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background-image: linear-gradient(
+                90deg,
+                hsl(0deg 100% 47%) 0%,
+                hsl(0deg 100% 43%) 7%,
+                hsl(0deg 100% 39%) 13%,
+                hsl(0deg 100% 35%) 19%,
+                hsl(0deg 100% 32%) 24%,
+                hsl(0deg 100% 28%) 29%,
+                hsl(0deg 100% 24%) 35%,
+                hsl(0deg 100% 20%) 42%,
+                hsl(0deg 100% 16%) 49%,
+                hsl(0deg 100% 12%) 58%,
+                hsl(0deg 100% 8%) 69%,
+                hsl(0deg 100% 4%) 82%,
+                hsl(0deg 0% 0%) 100%
+            );
+            font-size: 16px;
+            background-position: center;
+            background-size: cover;
+            color: #000000;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            
+        }
+        header {
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        #download-file {
+            backdrop-filter: blur(20px) saturate(181%);
+            -webkit-backdrop-filter: blur(20px) saturate(181%);
+            background-color: rgba(10, 1, 1, 0.74);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            
+            /* New additions */
+            width: 44%; /* Half the screen width */
+            height: 50%;
+            margin: 0 auto; /* Center the element */
+            position: relative;
+            left: 0;
+            right: 0;
+        }
+
+        .card2 {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #ffffff;
+            background-color: #ffffff1e;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        #download-file button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        header {
+            background-color: #b100004b;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #download-text h1 {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #FFFFFF;
+            text-align: center;
+            justify-content: center;
+        }
+        #download-text {
+            left: 0;
+            right: 100;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #download-text p {
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+        nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+            background-color: #0000003b;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            text-align: center;
+            width: 200px;
+            height: 24px;
+            top: 200px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+        }
+        nav ul li a:hover {
+            color: #fd7373;
+        }
+        .card {
+            backdrop-filter: blur(20px) saturate(181%);
+            -webkit-backdrop-filter: blur(20px) saturate(181%);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.125);
+            text-align: center;
+            margin: 0 auto;
+            padding: 20px;
+            color: #ffffff;
+            background-color: #00000050;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 44%; /* Half the screen width */
+            height: 50%;
+        }
+        .card h4 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+
+        }
+
+        .card p {
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+        #current {
+            color: #ff0000;
+        }
+        #current:hover {
+            color: #ff0000;
+        }
+        .card-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+        }
+        .card-body {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+            justify-content: center;
+
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/index.html"><span id="current">Home <i class="fa fa-home" aria-hidden="true"></i></span></a></li>
+                <li><a href="https://app.milanote.com/1SWLbC1LUF4v0g/tha-boys">Upload <i class="fa fa-cloud-upload" aria-hidden="true"></i></a></li>
+                <li><a href="https://doxbin.com/upload/">DoxBin upload <i class="fa fa-upload" aria-hidden="true"></i></a></li>
+                <li><a href="https://doxbin.org">Doxbin <i class="fa fa-tree" aria-hidden="true"></i></a></li>
+                <li><a href="http://192.168.178.26:5000/download/index.html">Download stuff <i class="fa fa-cloud-download" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+    <br><br>
+    <damain>
+        <div class="card text-left">
+            <img class="card-img-top" src="/assets/img/logo.png" alt="">
+            <div class="card-body">
+                <h4 class="card-title">ThaBoys</h4>
+                <p class="card-text">A hacker group of newbies, diving deep into the world of cybersecurity and digital exploits.</p>
+            </div>
+        </div>
+    </damain>
+    <br>
+    <main>
+        <download>
+            <div id="download-file">
+                <br><br>
+                <div id="download-text">
+                    <h1>Index of /download/Discord-Webhook-Spammer.html</h1>
+                    <p>Download any type of ddos tool for everything</p>
+                </div>
+                <br><br><br> <!--Make the look cleaner by adding some brack lines-->
+                <div class="card2 text-left">
+                  <div class="card-body">
+                    <h4 class="card-title">DDOSER for home ips (Comming soon)</h4>
+                    <p class="card-text">The DDOSER for  home ips to use in Intell IDEA or any else java IDE </p>
+                    <button class="card-button" id="download-button" onclick="downloadddos('1')"><i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+                  </div>
+                </div>
+
+                <!--End of download card -->
+                <br><br> <br> <!--Hold the cards away form echother-->
+                <!-- New card start-->
+                 <div class="card2 text-left">
+                   <div class="card-body">
+                    <h4 class="card-title">DDOSER for servers (Comming soon)</h4>
+                    <p class="card-text">The DDOSER for http/https servers to use in Intell IDEA or any else java IDE </p>
+                     <button class="card-button" id="download" onclick="downloadddos('2')"><i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+                   </div>
+                 </div>
+                 <br><br><br> <!--Make the dowload div have some sace-->
+                 <!--New card-->
+                 <div class="card2 text-left">
+                   <div class="card-body">
+                     <h4 class="card-title">DDOSER for minecraft (Comming soon)</h4>
+                     <p class="card-text">The DDOSER for minecraft to use in Intell IDEA or any else java IDE </p>
+                     <button class="card-button" id="dwnload" onclick="downloadddos('3')"><i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+                   </div>
+                 </div>
+                 <br><br><br> <!--Make the dowload div have some sace-->
+            </div>
+            <!--End of download div -->
+        </download>
+        <br><br><br><br> <!-- make the page have some space blow-->
+    </main>
+    <script src="/assets/js/handeller-wb.js"></script>
+</body> 
+</html>
